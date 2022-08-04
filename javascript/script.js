@@ -12,24 +12,52 @@ function length_of_object(objectArg) {
 
 //A FUNCTION THAT PRINTS EVERYTHING IN A LIST
 var vinix = ['C', 'MA', 'BA', 'PG', 'CSCO', 'VZ', 'PFE', 'HD', 'INTC']
-listArray = vinix;
+var listArray = vinix;
   (function printsAll (listObject) {
    for (var i = 0; i < listObject.length; i++) {
      console.log(listObject[i]);
    }
    return True
  }
-(listArray));
+(listArray)); //was immediately invoked with the argument
+
 
 //OBJECT WITH FUNCTION OF CHANGING NAME
-var changeName = {
-  namestuds: "jim",
-  student: this.name,
-  changeToTim : function changing(nameRecieved) {
-    ChangeName.namestuds = nameRecieved;
+var nameChange= prompt("Enter firstName: "); //asks for firstName
+var secondChange = prompt("Enter secondName: "); //asks for secondName
+
+//Object that contains details of user
+var ChangeName = {
+  name: "jim ",
+  secondName: "james",
+  student: '', // contains "name" + "secondName" variable.
+
+  //Function that changes and updates the name variable
+  changeToTim : function changing(nameReceived,secondNameReceived) {
+    
+    if(nameReceived && secondNameReceived ==undefined){ //checks if the parameters are numbers or have error.
+      alert("pls input names in alphabet");
+      return false;
+      
+    }
+
+    //if all correct, proceed...
+    else{
+      ChangeName.name = nameReceived; // firstName received...
+      ChangeName.secondName = secondNameReceived; // firstName received...
+    this.student = ChangeName.name +" "+ ChangeName.secondName //updates and changes "student" to the current firstName and secondName
+
+    ChangeName.alertMsg() //invokes the alert message which is the updated name..
+      
+    return true
+    };
+    
   },
+
+  //An alert message that outputs the content in the student variable.
   alertMsg:function alerting() {
-      console.log("changed name to " + this.namestuds )
+      alert("changed name to " + this.student )
   }
 
 }
+ChangeName.changeToTim(nameChange,secondChange); //invokes the "changeToTim" function in "ChangeName" object, with arguments "nameChange,secondChange" variable.

@@ -59,10 +59,9 @@ print("love" not in greeting) # "not in" checks if the object is included in "gr
 VINIX = ['C', 'MA', 'BA', 'PG', 'CSCO', 'VZ', 'PFE', 'HD', 'INTC',
         'T', 'V', 'UNH', 'WFC', 'CVX', 'BAC', 'JNJ', 'GOOGL', 'GOOG', 'BRK.B',
         'XOM', 'JPM', 'FB', 'AMZN', 'MSFT', 'AAPL']
-
-    print(VINIX[0])
+print(VINIX[0])
     #prints >> "C"
-    print(VINIX[1])
+print(VINIX[1])
     #prints >> 'MA'
 
     #You can even use the list to see if a particular stock is in the index fund VINIX or not.
@@ -78,9 +77,9 @@ VINIX = ['C', 'MA', 'BA', 'PG', 'CSCO', 'VZ', 'PFE', 'HD', 'INTC',
 # then the object is considered immutable. egs: string datatype
 
 #MODIFING A List
-my_lst = [1, 2, 3, 4, 5]
-my_lst[0] = 'one' # changing the content by Index
-print(my_lst)
+my_array = [1, 2, 3, 4, 5]
+my_array[0] = 'one' # changing the content by Index
+print(my_array)
 #prints >> ['one', 2, 3, 4, 5]
 
 
