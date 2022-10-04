@@ -1,6 +1,6 @@
-//A FUNCTION THAT PRINTS THE LENGHT OF AN ARRARY OR STRING
+//A FUNCTION THAT PRINTS THE LENGHT OF AN ARRAY OR STRING
 function length_of_object(objectArg) {
-      count="";
+    var count="";
       for (i=0;i<=objectArg.length;i++){
         count = [i];
 
@@ -61,3 +61,36 @@ var ChangeName = {
 
 }
 ChangeName.changeToTim(nameChange,secondChange); //invokes the "changeToTim" function in "ChangeName" object, with arguments "nameChange,secondChange" variable.
+
+
+//------NEW FUNCTION-----//
+let row = 100;
+let seatNumber = 100;
+
+function seatCounter(rowNumber,availableSeat) {
+  for (let i = 0; i < rowNumber.length; i++) {
+    let element = i;
+    console.log(element);
+    
+  }
+}
+
+
+var seatCount = prompt("Enter row number")
+var notAvailable =[];
+
+
+
+if (seatCount<=100 & notAvailable !=seatCount) {
+  alert("Your seat number " + seatCount + " is available")
+
+  inputUnavailable(seatCount);
+
+}else{
+  alert("INVALID")
+}
+
+function inputUnavailable(unavailable) {
+  notAvailable = unavailable;
+}
+
