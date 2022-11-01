@@ -94,3 +94,67 @@ function inputUnavailable(unavailable) {
   notAvailable = unavailable;
 }
 
+
+
+/*============= unit converter (for measurement) ============================*/
+
+let cm = 2.54;  //===== STANDARD VALUE FOR CM =========
+let inch = 0.394; //===== STANDARD VALUE FOR INCH =========
+let numArray = [1,2,3,4,5,6,7,8,9,10];
+
+function unitConverter (){ 
+  let whichUnitFrom = prompt("which unit are you converting from: Egs: cm,inch ") //======= COLLECTS VALUES ============================
+  let unitValue1 = prompt("Enter the value "); //======= COLLECTS VALUES ============================
+  let whichUnitTo = prompt("which unit are you converting to, Egs: cm,inch")  //======= COLLECTS VALUES ============================
+  let unitValue2 = "";
+  
+  if (whichUnitFrom === "" && whichUnitTo === "" && unitValue1 === ""){ //======= CHECKS IF VALUES INPUTTED ARE EMPTY SPACES ============================
+
+            alert ("Error pls input correct values"); //======= ALERTS TO CORRECT ============================
+            unitConverter();  //======= FUNCTION RECURSION (REPEATS) ============================
+          
+  }
+
+  else{ 
+    if (whichUnitFrom == numArray[0] || whichUnitFrom == numArray[1] || whichUnitTo == numArray[0] || whichUnitTo == numArray[1]){  //======= CHECKS IF VALUES INPUTTED ARE NUMBERS FOUND IN "numArray" ACCORDING TO ITEM INDEXING ============================
+      alert('pls input correct option values');
+      unitConverter();
+
+    }else{
+      // console.log("received") //======= ALL ERROR PROBABILITY SOLVED ============================
+
+      if (whichUnitFrom == "cm" && whichUnitTo == "inch"){
+
+        //The calculation process here
+        unitValue2 = unitValue1 * inch;
+        console.log("the value of " + unitValue1 + " in cm is " + unitValue2 + " in inch" );
+        unitConverter();
+
+        } 
+        else if (whichUnitFrom == "inch" && whichUnitTo == "cm"){
+
+          //The calculation process here
+          unitValue2 = unitValue1 * cm;
+
+        console.log("the value of " + unitValue1 + " in inch is " + unitValue2 + " in cm" );
+        unitConverter();
+        }
+      
+      }
+
+  }
+    
+};
+
+
+
+
+// else if (whichUnitFrom === "cm" && whichUnitTo === " inch" || whichUnitFrom === "inch" && whichUnitTo === "cm"){
+
+//   //The calculation process here
+// Console.log("the value of " + unitValue1+ " in cm is " + unitValue2 + " in inch" );
+// } 
+// }
+
+
+
